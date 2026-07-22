@@ -1,0 +1,86 @@
+/* ==========================================================
+   Responsive breakpoints — WALKADON LOGISTICS
+   ========================================================== */
+
+/* Large tablets / small desktops */
+@media (max-width: 1080px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .footer__grid { grid-template-columns: 1.4fr 1fr 1fr; }
+  .footer__grid > :nth-child(4) { grid-column: 1 / -1; }
+  .why { grid-template-columns: 1fr; }
+  .why__media img { height: 420px; }
+  .process__steps { grid-template-columns: repeat(2, 1fr); }
+  .cta-banner { grid-template-columns: 1fr; }
+  .cta-banner__actions { justify-content: flex-start; }
+}
+
+/* Tablets */
+@media (max-width: 860px) {
+  :root { --nav-h: 70px; }
+  .nav__menu { display: none; }
+  .nav__cta .btn:not(.nav__toggle) { display: none; }
+  .nav__toggle { display: inline-flex; }
+
+  .grid-3, .grid-2 { grid-template-columns: 1fr; }
+  .info-grid { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: repeat(2, 1fr); padding: 40px 26px; }
+  .form__row { grid-template-columns: 1fr; }
+  .hero__meta { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .hero__meta .card { padding: 14px; }
+  .hero__meta strong { font-size: 1.15rem; }
+  .footer__grid { grid-template-columns: 1fr 1fr; }
+  .footer__grid > :nth-child(1) { grid-column: 1 / -1; }
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+  .container { padding: 0 18px; }
+  .section { padding: 70px 0; }
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.75rem; }
+
+  .hero { min-height: 92vh; }
+  .hero__meta { grid-template-columns: 1fr; }
+  .btn { padding: 12px 20px; font-size: .9rem; }
+
+  .process__steps { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: 1fr; }
+  .footer__grid { grid-template-columns: 1fr; }
+  .footer__bottom { flex-direction: column; text-align: center; }
+
+  .floating { right: 16px; bottom: 16px; }
+  .back-top { left: 16px; bottom: 16px; }
+  .fab { width: 52px; height: 52px; }
+
+  .cta-banner { padding: 34px 24px; }
+}
+
+
+/* Mobile overflow fixes */
+html, body{
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
+}
+*{
+  box-sizing:border-box;
+}
+@media (max-width:560px){
+  .hero__actions{
+    flex-direction:column;
+    align-items:stretch;
+  }
+  .hero__actions .btn{
+    width:100%;
+    justify-content:center;
+    white-space:normal;
+  }
+  .container{
+    padding-left:16px;
+    padding-right:16px;
+  }
+  img,video,iframe{
+    max-width:100%;
+    height:auto;
+  }
+}
