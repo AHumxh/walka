@@ -16,6 +16,80 @@
 <link href="css/style.css" rel="stylesheet"/>
 <link href="css/responsive.css" rel="stylesheet"/>
 <link href="css/animations.css" rel="stylesheet"/>
+<style>
+/* Prevent horizontal scrolling */
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img,
+video,
+iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Mobile Fix */
+@media (max-width: 768px) {
+
+    .container{
+        width:100%;
+        max-width:100%;
+        padding-left:16px;
+        padding-right:16px;
+    }
+
+    /* Stack form and info cards */
+    .grid{
+        display:flex !important;
+        flex-direction:column !important;
+        gap:24px !important;
+    }
+
+    /* Form rows become one column */
+    .form__row{
+        display:flex !important;
+        flex-direction:column !important;
+        gap:18px;
+    }
+
+    .form__group{
+        width:100% !important;
+    }
+
+    .form input,
+    .form select,
+    .form textarea{
+        width:100%;
+    }
+
+    aside{
+        width:100%;
+    }
+
+    .info{
+        width:100%;
+    }
+
+    /* Prevent anything from exceeding screen */
+    .page-hero,
+    .section,
+    .form,
+    .info{
+        max-width:100%;
+        overflow:hidden;
+    }
+
+}
+</style>
 </head>
 <body>
 <header class="nav" data-nav="">
